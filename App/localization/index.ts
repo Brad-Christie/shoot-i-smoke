@@ -19,19 +19,21 @@ import i18n from 'i18n-js';
 
 // languages
 const en = require('./languages/en');
+const enUS = require('./languages/en-US');
 const es = require('./languages/es');
 const fr = require('./languages/fr');
 
 i18n.fallbacks = true;
 i18n.translations = {
   en,
+  'en-US': enUS,
   es,
   fr
 };
 
-// `Localization.locale` can come in the form of `en-US` sometimes, so we just
-// take the 1st part.
-i18n.locale = (Localization.locale || 'en').split('-')[0];
+// Use 
+i18n.defaultLocale = 'en';
+i18n.locale =  Localization.locale;
 
 export {
   i18n
