@@ -31,9 +31,8 @@ i18n.translations = {
   fr
 };
 
-// Use 
 i18n.defaultLocale = 'en';
-i18n.locale =  Localization.locale;
+i18n.locale = Localization.locale;
 
 export {
   i18n
